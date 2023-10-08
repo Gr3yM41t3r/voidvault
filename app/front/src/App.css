@@ -79,24 +79,73 @@ select, input{
 }
 
 
-button.submit {
-  background-color: #007BFF; /* Blue color for primary actions */
-  color: #FFFFFF; /* Text color */
-  padding: 12px 20px; /* Padding to give the button some size */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners for a modern look */
-  cursor: pointer; /* Hand cursor on hover */
-  font-size: 16px; /* Font size */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
-  outline: none; /* Remove the default focus outline */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* A subtle shadow to give depth */
+
+.button-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end; /* Aligns its children to the far right */
 }
 
+button.submit {
+  background-color: #007BFF;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  outline: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+
 button.submit:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
 }
 
 button.submit:active {
-  background-color: #00408a; /* Even darker blue on active/click */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* A smaller shadow for a pressed look */
+  background-color: #00408a;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+
+.token-input {
+  border: 2px solid blue;  /* blue is just an example for highlighting */
+  padding: 10px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.token-input.error {
+  border-color: red;
+}
+
+
+
+
+.token-prompt {
+  margin-bottom: 15px; /* Add some space below the message */
+  color: #333; /* Dark gray color */
+  font-size: 18px; /* Slightly larger font */
+  text-align: center; /* Center the text */
+}
+
+.token-help {
+  margin-top: 10px; /* Add some space above the secondary message */
+  font-size: 14px; /* Slightly smaller font */
+  text-align: center; /* Center the text */
+  color: #666; /* Lighter gray color */
+}
+
+.token-link {
+  color: #007BFF; /* Match the button color */
+  text-decoration: none; /* Remove default underline */
+}
+
+.token-link:hover {
+  text-decoration: underline; /* Add underline on hover for better usability */
+}
+
