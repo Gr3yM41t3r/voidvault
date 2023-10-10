@@ -106,7 +106,9 @@ function ConfigForm() {
         </tr>
        
     </table>
-    <button class="submit" type="submit">Submit</button>
+            <div className="button-container">
+                <button className="submit" type="submit" >Submit</button>
+            </div>
 </div>
 
   );
