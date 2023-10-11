@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const { sessionStore } = require('./src/config/db');
 const { verifyToken } = require('./src/controllers/authController');
+const formController = require('./src/controllers/formController');
+
 const cors = require('cors');
 
 
@@ -39,6 +41,9 @@ app.get('/check-session', (req, res) => {
         res.json({ authenticated: false });
     }
 });
+
+
+app.post('/config', formController.submitForm);
 
 
 

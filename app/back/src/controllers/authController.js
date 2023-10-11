@@ -23,6 +23,7 @@ exports.verifyToken = async (req, res) => {
         }
 
         req.session.userId = "user_id_here";  // Store user ID or any other data you need in the session
+        console.log('Sending session ID:', req.session.id);
 
         // Setting the session cookie in the client's browser
         res.cookie('session_id_name', req.session.id, {
